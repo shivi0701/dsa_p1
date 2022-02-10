@@ -15,6 +15,7 @@ class singlylinkedlist{
             newnode.next = head;
         }
         head= newnode;
+        System.out.println("Node inserted");
     }
     public void insertatEnd(Node newnode){
         if(head==null){
@@ -27,6 +28,7 @@ class singlylinkedlist{
             }
             temp.next=newnode;
         }
+        System.out.println("Node inserted");
     }
     public void insertatPos(int pos,Node newnode){
         if(head==null){
@@ -40,6 +42,7 @@ class singlylinkedlist{
             newnode.next=temp.next;
             temp.next= newnode;
         }
+        System.out.println("Node inserted");
     }
     public void traverse(){
         if(head==null){
@@ -60,6 +63,7 @@ class singlylinkedlist{
         else{
             head=head.next;
         }
+        System.out.println("Node deleted");
     }
     public void deleteLast(){
         if(head!=null){
@@ -71,6 +75,7 @@ class singlylinkedlist{
             }
             prev.next=null;
         }
+        System.out.println("Node deleted");
     }
     public void deleteatPos(int pos){
         if(head==null){
@@ -90,6 +95,7 @@ class singlylinkedlist{
             else {
             temp.next= temp.next.next;}
         }
+        System.out.println("Node deleted");
     }
     public void search(int ele){
         Node temp= head;
@@ -120,6 +126,7 @@ class singlylinkedlist{
             }
             one=one.next;
         }
+        System.out.println("List sorted");
     }
     public void sorted(){
         Node one= head;
@@ -135,6 +142,7 @@ class singlylinkedlist{
             }
             one=one.next;
         }
+        System.out.println("List sorted");
     }
 
     public void mergelists(Node l1,Node l2) {
@@ -162,6 +170,7 @@ class singlylinkedlist{
                 result = result.next;
             }
         }
+        System.out.println("List Merged. Check by typing 3!!");
     }
 }
 class Main {
