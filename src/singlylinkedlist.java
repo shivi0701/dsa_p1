@@ -61,7 +61,7 @@ class singlylinkedlist{
             head=head.next;
         }
     }
-    public void deleteatLast(){
+    public void deleteLast(){
         if(head==null){
         }
         else {
@@ -89,6 +89,7 @@ class singlylinkedlist{
             if(temp==null || temp.next==null){
                 System.out.println("No element to delete");
             }
+            assert temp != null;
             temp.next= temp.next.next;
         }
     }
@@ -107,7 +108,7 @@ class singlylinkedlist{
             one=one.next;
         }
     }
-    public void sortdesc(){
+    public void sorted(){
         Node one= head;
         while (one!=null){
             Node two= one.next;
@@ -196,10 +197,10 @@ class Main {
                 case 4 -> sll2.traverse();
                 case 5 -> sll.insertatPos(sc.nextInt(), new Node(sc.nextInt()));
                 case 6 -> sll.deletefrombeg();
-                case 7 -> sll.deleteatLast();
+                case 7 -> sll.deleteLast();
                 case 8 -> sll.deleteatPos(sc.nextInt());
                 case 9 -> sll.sortasc();
-                case 10 -> sll.sortdesc();
+                case 10 -> sll.sorted();
                 case 11 -> sll.mergelists(sll2.head,sll.head);
                 case 12 -> System.exit(1);
             }
