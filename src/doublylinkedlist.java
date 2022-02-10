@@ -89,7 +89,7 @@ class Main1{
                      4) To print the LinkedList\s
                      5) to delete from beginning\s
                      6) to delete from last\s
-                     7) to 
+                     7) to delete at specific position\s 
                      8) exit""");
             System.out.println("Enter your choice");
             int c = sc.nextInt();
