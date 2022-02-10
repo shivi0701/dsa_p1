@@ -62,9 +62,7 @@ class singlylinkedlist{
         }
     }
     public void deleteLast(){
-        if(head==null){
-        }
-        else {
+        if(head!=null){
             Node temp=head;
             Node prev=null;
             while (temp!=null){
@@ -89,8 +87,8 @@ class singlylinkedlist{
             if(temp==null || temp.next==null){
                 System.out.println("No element to delete");
             }
-            assert temp != null;
-            temp.next= temp.next.next;
+            else {
+            temp.next= temp.next.next;}
         }
     }
     public void sortasc(){
