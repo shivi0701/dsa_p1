@@ -91,6 +91,21 @@ class singlylinkedlist{
             temp.next= temp.next.next;}
         }
     }
+    public void search(int ele){
+        Node temp= head;
+        int c=0;
+        while (temp!= null){
+            if(temp.data==ele){
+                System.out.println("Element found");
+                c=1;
+                break;
+            }
+            temp=temp.next;
+        }
+        if (c==0){
+            System.out.println("Element not found");
+        }
+    }
     public void sortasc(){
         Node one= head;
         while (one!=null){
@@ -185,7 +200,8 @@ class Main {
                      9) to sort in ascending order\s
                      10) to sort in descending order\s
                      11) merge 2 lists\s
-                     12) exit""");
+                     12) search element\s
+                     13) exit""");
             System.out.println("Enter your choice");
             int c = sc.nextInt();
             switch (c) {
@@ -200,7 +216,8 @@ class Main {
                 case 9 -> sll.sortasc();
                 case 10 -> sll.sorted();
                 case 11 -> sll.mergelists(sll2.head,sll.head);
-                case 12 -> System.exit(1);
+                case 12 -> sll.search(sc.nextInt());
+                case 13 -> System.exit(1);
             }
         }
 
