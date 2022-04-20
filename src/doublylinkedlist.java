@@ -189,7 +189,6 @@ class Main1{
                      11) to sort in descending order\s
                      12) to merge 2 linked lists\s
                      13) exit""");
-            System.out.println("Enter your choice");
             int c = sc.nextInt();
             switch (c) {
                 case 1 -> dll.insertatBeg(new Node1(sc.nextInt()));
